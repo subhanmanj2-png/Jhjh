@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>SUBHAN MANJ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- BOOT SCREEN -->
+<div id="boot">
+  <div id="boot-text">INITIALIZING</div>
+</div>
+
+<!-- MAIN SCREEN -->
+<div id="app" class="hidden">
+
+  <!-- FACE — full screen background -->
+  <div id="face-bg">
+    <canvas id="face-canvas"></canvas>
+    <div id="face-overlay"></div>
+  </div>
+
+  <!-- STATUS DOT top left -->
+  <div id="status-dot"></div>
+
+  <!-- VOICE BARS — centered bottom of face -->
+  <div id="voice-bars">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+
+  <!-- RESPONSE TEXT — floats over face -->
+  <div id="response-box">
+    <div id="response-text"></div>
+  </div>
+
+  <!-- INPUT AREA — bottom -->
+  <div id="input-area">
+    <div id="input-wrap">
+      <input
+        id="msg-input"
+        type="text"
+        placeholder="speak"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <button id="send-btn" onclick="sendMsg()">↑</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="ai.js"></script>
+</body>
+</html>
+
